@@ -1,0 +1,15 @@
+
+#res {
+    display: flex;
+    justify-content: center;
+}
+
+.images {
+    border-radius: 15px;
+    margin: 5px;
+    border: 1px solid black;
+}
+
+#board {
+    margin-left: 40px;
+}
