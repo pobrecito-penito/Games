@@ -2,6 +2,8 @@ let container = document.querySelector('#container');
 let app = document.querySelector('#app');
 let result = document.querySelector('#h');
 let match = document.querySelector('#match');
+let hclicks = document.querySelector('#clicks');
+let newGame = document.querySelector('#new-game');
 
 const images = [
     {
@@ -73,6 +75,7 @@ images.sort(() => 0.5 - Math.random());
 
 let chosenCards = [];
 let pairs = [];
+let clicks = 0;
 
 const Board = (images) => {
     let div = document.createElement('div');
@@ -94,7 +97,6 @@ const Board = (images) => {
             chosenCards.push(el);
             src = el.src;
             card.src = src;
-            console.log(chosenCards);
             if(chosenCards.length === 2){
                 setTimeout(() => {
                     let newSrc = checkForMatch();
@@ -103,6 +105,8 @@ const Board = (images) => {
                     document.querySelector(`#${chosenCards[1].id}`).src = newSrc;
                     chosenCards = [];
                 }, 500 )}
+            clicks ++;
+            hclicks.textContent = `Clicks: ${clicks}`;
         });
         div.appendChild(card);
     })
@@ -124,12 +128,23 @@ const checkForMatch = () => {
         match.innerHTML = 'Nope!'
         src = "images/upitnik.jpg";
     }
-    result.innerHTML = `Pairs found: ${pairs.length}`;
+    result.innerHTML = `Pairs found: ${pairs.length/2}`;
     if(pairs.length === images.length){
         result.innerHTML = 'You found them all!';
     }
     return src;
 }
+
+newGame.addEventListener('click', () => {
+    chosenCards = [];
+    pairs = [];
+    clicks = 0;
+    app.innerHTML = '';
+    hclicks.textContent = `Clicks: 0`;
+    result.innerHTML = 'Pairs found: 0';
+    match.innerHTML = '';
+    app.appendChild(Board(images));
+})
 
 app.appendChild(Board(images));
 

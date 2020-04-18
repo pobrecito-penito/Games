@@ -1,7 +1,16 @@
+body {
+    font-family: cursive;
+    font-size: smaller;
+    height: 100%;
+    width: 100%;
+    background-image: url('https://image.freepik.com/free-vector/bright-stars-flat-background_23-2148379400.jpg');
+    background-size: cover;
+    background-position: center;
+}
 
 #res {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
 }
 
 .images {
@@ -12,4 +21,23 @@
 
 #board {
     margin-left: 40px;
+}
+
+#result {
+    height: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+#new {
+    display: flex;
+    justify-content: center;
+}
+
+#new-game {
+    border-radius: 15px;
+    font-family: cursive;
+    font-weight: bolder;
+    background-color: rgb(255, 165, 0, 0.5);
+    padding: 7px;
 }
