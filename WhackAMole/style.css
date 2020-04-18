@@ -1,0 +1,42 @@
+body {
+    display: grid;
+    justify-content: center;
+}
+
+.square {
+    height: 200px;
+    width: 200px;
+    border: solid;
+    border-color: black;
+}
+
+.grid {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-content: center;
+    width: 618px;
+    height: 618px;
+    justify-self: center;
+}
+
+.mole {
+    background-image: url('https://www.pngitem.com/pimgs/m/239-2394216_groundhog-clipart-whack-a-mole-transparent-background-hole.png');
+    background-size: cover;
+}
+
+#header {
+    display: grid;
+    justify-content: center;
+}
+
+#score-time {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+#score-time div {
+    display: flex;
+    margin-left: 10px;
+}
+
