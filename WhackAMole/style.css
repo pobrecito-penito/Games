@@ -1,11 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2&display=swap');
+
 body {
     display: grid;
     justify-content: center;
+    font-family: 'Baloo Bhaina 2', cursive;
+    background-color: rgba(170, 255, 0, 0.4);
 }
 
 .square {
-    height: 200px;
-    width: 200px;
+    height: 150px;
+    width: 150px;
     border: solid;
     border-color: black;
 }
@@ -15,8 +19,8 @@ body {
     flex-flow: row wrap;
     justify-content: center;
     align-content: center;
-    width: 618px;
-    height: 618px;
+    width: 500px;
+    height: 500px;
     justify-self: center;
 }
 
@@ -25,18 +29,38 @@ body {
     background-size: cover;
 }
 
+.hit {
+    background-image: url('https://i7.pngguru.com/preview/447/597/308/whac-a-mole-crappy-flappy-moles-android-video-game-android.jpg');
+    background-size: cover;
+}
+
 #header {
     display: grid;
-    justify-content: center;
+    grid-template-rows: 1fr 1fr;
+}
+
+#headline {
+    display: flex;
+    justify-content: space-around;
+    margin-top: -15px; 
+}
+
+#start, #time {
+    height: fit-content;
+    margin-top: 20px;
+    padding: 5px;
+    font-family: 'Baloo Bhaina 2', cursive;
+    font-weight: bolder;
+    font-size: large;
+    border: double;
+    background-color: rgb(255, 255, 0,0.4);
+
 }
 
 #score-time {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    display: flex;
+    justify-content: space-between;
+    margin-top: -20px;
 }
 
-#score-time div {
-    display: flex;
-    margin-left: 10px;
-}
 
