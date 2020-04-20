@@ -90,7 +90,8 @@ start.addEventListener('click', () => {
     timerId = setInterval(countDown,1000);
 })
 
-select.addEventListener('change',() => {
+select.addEventListener('change',(e) => {
     findMax();
     score.textContent = '0';
+    counter.textContent = e.target.value;
 });
