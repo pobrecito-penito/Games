@@ -1,22 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Rubik+Mono+One&display=swap');
+
+body {
+  font-family: 'Rubik Mono One', sans-serif;
+  font-family: 'Berkshire Swash', cursive;
+  font-size: larger;
+  color: blue;
+  background-image: url('https://png.pngtree.com/thumb_back/fw800/back_pic/04/55/17/905863ce62228b8.jpg');
+  background-size: cover;
+  display: grid;
+}
+
 .grid {
     border: 1px solid;
     display: flex;
     flex-wrap: wrap;
-    height: 120px;
-    width: 140px;
+    height: 330px;
+    width: 385px;
+    justify-self: center;
+    background-color: blue;
   }
   
   .grid div {
-    height: 20px;
-    width: 20px;
+    height: 50px;
+    width: 50px;
+    margin: 2.5px;
+  }
+
+  .div {
+    background-color: white;
+    border-radius: 50%;
   }
 
   .player-one {
     background-color: red;
-    border-radius: 10px;
+    border-radius: 50%;
   }
 
   .player-two {
-    background-color: blue;
-    border-radius: 10px;
+    background-color: yellow;
+    border-radius: 50%;
   }
+
+
+#header {
+  display: grid;
+  justify-content: center;
+}
+
+  #header h2 {
+    justify-self: center;
+    font-size: 40px;
+    margin-top: 13px;
+    letter-spacing: 1.5px;
+    margin-bottom: 25px;
+  }
+
+ #header input {
+   margin: 10px;
+   width: 180px;
+   text-align: center;
+   font-family: 'Rubik Mono One', sans-serif;
+   font-family: 'Berkshire Swash', cursive;
+   font-size: larger;
+   background-color: rgb(239, 242, 255);
+   color: blue;
+   border: none;
+   border-bottom: solid;
+   border-color: rgba(27, 27, 230, 0.5);
+ }
+
+ #header button {
+  width: fit-content;
+  justify-self: center;
+  margin-top: 10px;
+  text-align: center;
+  font-family: 'Rubik Mono One', sans-serif;
+  font-family: 'Berkshire Swash', cursive;
+  font-size: 20px;
+  padding: 5px;
+  background-color: rgb(239, 242, 255);
+  color: blue;
+  border: ridge;
+  border-color: rgba(27, 27, 230, 0.7);
+ }
+
+ #header h3 {
+   justify-self: center;
+ }
+
+ #restart {
+  width: fit-content;
+  justify-self: center;
+  text-align: center;
+  font-family: 'Rubik Mono One', sans-serif;
+  font-family: 'Berkshire Swash', cursive;
+  font-size: 15px;
+  margin-left: 322px;
+  background-color: rgb(239, 242, 255);
+  color: blue;
+  border: ridge;
+  border-color: rgba(27, 27, 230, 0.7);
+ }
+
+ #cant {
+   justify-self: center;
+ }

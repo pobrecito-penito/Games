@@ -71,7 +71,7 @@ const countDown = () => {
     if(currentTime === -1){
         clearInterval(timerId);
         counter.textContent = 0;
-        // alert(`Game over! Your result: ${result}`);
+        alert(`Game over! Your result: ${result}`);
         results.push({score: result, time: select.value});
         findMax();
         stopMole();
